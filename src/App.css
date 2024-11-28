@@ -230,7 +230,7 @@ main {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.cardDetalhes img{
+.cardDetalhes img {
   border-radius: 10px;
 }
 
@@ -259,7 +259,7 @@ main {
   border-radius: 10px;
 }
 
-.fundo-menu{
+.fundo-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -269,9 +269,9 @@ main {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.menu{
+.menu {
   display: flex;
-  padding:  0 20px 20px 20px;
+  padding: 0 20px 20px 20px;
   flex-direction: column;
   top: -288px;
   background-color: #525B44;
@@ -283,7 +283,7 @@ main {
   transition: all ease 0.5s;
 }
 
-.menu ul{
+.menu ul {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -292,7 +292,7 @@ main {
   margin: 0 10px;
 }
 
-.menu ul .link{
+.menu ul .link {
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
   width: 100%;
@@ -305,7 +305,7 @@ main {
   gap: 10px;
 }
 
-.menu form{
+.menu form {
   display: flex;
   align-items: center;
   background-color: white;
@@ -315,7 +315,7 @@ main {
   border-radius: 10px;
 }
 
-.menu form input{
+.menu form input {
   background-color: transparent;
   border: none;
   font-size: 1rem;
@@ -323,7 +323,7 @@ main {
   outline: none;
 }
 
-.menu form button{
+.menu form button {
   font-size: 1rem;
   background-color: transparent;
   border: none;
@@ -331,95 +331,98 @@ main {
   cursor: pointer;
 }
 
-.menu form button i{
+.menu form button i {
   color: #525B44;
 }
 
-.active{
+.active {
   top: 87px;
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
+
   nav .links,
-  nav .busca{
-      display: none;
+  nav .busca {
+    display: none;
   }
 
-  nav{
-      z-index: 1000;
-      justify-content: space-between;
-      padding: 20px;
+  nav {
+    z-index: 1000;
+    justify-content: space-between;
+    padding: 20px;
   }
 
-  .container{
-      grid-template-columns: 1fr;
+  .container {
+    grid-template-columns: 1fr;
   }
 
-  .menu-hamburguer{
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  .menu-hamburguer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .menu-hamburguer button{
-      height: 40px;
-      width: 40px;
-      font-size: 1.6rem;
-      background-color: transparent;
-      border: none;
-      outline: none;
-      color: white;
+  .menu-hamburguer button {
+    height: 40px;
+    width: 40px;
+    font-size: 1.6rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
   }
 
-  @media (max-width: 480px){
-    nav .links,
-    nav .busca{
-        display: none;
-    }
+  .cardDetalhes {
+    margin-top: 0;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    nav{
-        z-index: 1000;
-        justify-content: space-between;
-        padding: 20px;
-    }
+  .cardDetalhes img {
+    width: 230px;
+  }
 
-    .menu-hamburguer{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .cardDetalhes h1 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
 
-    .menu-hamburguer button{
-        height: 40px;
-        width: 40px;
-        font-size: 1.6rem;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        color: white;
-    }
+  .avaliacao {
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .cardDetalhes{
-        margin-top: 0;
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .cardDetalhes img{
-        width: 230px;
-    }
-
-    .cardDetalhes h1{
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-    }
-
-    .avaliacao{
-        margin: 10px 0;
-        align-items: center;
-        justify-content: center;
-    }
+  .erro {
+    grid-row: 1/5;
+    grid-column: 1/4;
+    font-weight: 400;
+    text-align: center;
+    color: #313131;
+    font-size: 1.7rem;
+    padding: 10px;
+  }
+  
+  .erro i{
+    margin-right: 5px;
+  }
 }
+
+.erro{
+  grid-row: 1/5;
+  grid-column: 1/4;
+  color: #313131;
+  font-weight: 400;
+}
+
+.linkCard{
+  text-decoration: none;
+  color: #4e5c4c;
+  transition: all ease 0.4s;
+}
+
+.linkCard:hover{
+  transform: scale(1.05);
 }

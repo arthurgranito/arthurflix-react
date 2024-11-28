@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const DetalhesFilmes = () => {
+const DetalhesSeries = () => {
     const { id } = useParams();
     const apiKey = '49b16f807a3f235aa5a7ebe907022a77';
     const [serie, setSerie] = useState({});
@@ -36,7 +36,10 @@ const DetalhesFilmes = () => {
                     </div>
                 }
                 <div className="cardDetalhes">
-                    <img src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`} alt={serie.name} />
+                    {serie.poster_path != null && <img src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`} alt={serie.name} />}
+
+                    {serie.poster_path == null && <img src={`https://via.placeholder.com/200/ffffff?text=${serie.name}`}/>}
+
                     <div className="dados">
                         <div className="cima">
                             <h1>{serie.name}</h1>
@@ -73,4 +76,4 @@ const DetalhesFilmes = () => {
     )
 }
 
-export default DetalhesFilmes;
+export default DetalhesSeries;

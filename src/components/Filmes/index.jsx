@@ -37,7 +37,7 @@ const FilmesSeries = () => {
 
                     {filmes.map(filme => {
                         return (
-                            <Card poster={filme.poster_path} titulo={filme.title} nota={(filme.vote_average).toFixed(1)} id={filme.id} filme={true}/>
+                            <Card poster={filme.poster_path} titulo={filme.title} nota={(filme.vote_average).toFixed(1)} id={filme.id} filme={true} />
                         )
                     })}
                 </div>
