@@ -39,7 +39,7 @@ const DetalhesFilmes = () => {
                 <div className="cardDetalhes">
                     {filme.poster_path != null && <img src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`} alt={filme.title} />}
 
-                    {filme.poster_path == null && <img src={`https://via.placeholder.com/200/ffffff?text=${filme.title}`} />}
+                    {filme.poster_path == null && <img src={`https://via.placeholder.com/100/ffffff?text=${filme.title}`} />}
 
 
                     <div className="dados">
