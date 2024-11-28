@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #D3F1DF;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #525B44;
+  color: white;
+  padding: 20px 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.menu-hamburguer {
+  display: none;
+}
+
+nav .logo a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+
+nav .logo i {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.05rem;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav .link::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all ease 0.3s;
+}
+
+nav .link:hover::after {
+  width: 100%;
+}
+
+nav form {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+nav form input {
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+nav form button {
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+nav form button i {
+  color: #525B44;
+}
+
+.titulo {
+  text-align: center;
+  margin-top: 20px;
+  color: #313131;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 250px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  height: 470px;
+}
+
+.card img {
+  border-radius: 10px;
+  height: 300px;
+  width: 100%;
+}
+
+.card p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.card p i {
+  color: rgb(240, 240, 0);
+}
+
+.card a {
+  width: 100%;
+}
+
+.card button {
+  height: 40px;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: #5A6C57;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.card button:hover {
+  background-color: #4e5c4c;
+}
+
+.carregamento {
+  width: 100vw;
+  height: calc(100vh - 87px);
+  background-color: #D3F1DF;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bolinha {
+  width: 120px;
+  height: 120px;
+  background-color: transparent;
+  display: block;
+  border-radius: 50%;
+  border: 15px solid #4e5c4c;
+  border-top: 12px solid transparent;
+  animation: carregando 1s linear infinite;
+}
+
+@keyframes carregando {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.busca {
+  color: #525B44;
+}
+
+.containerDetalhes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cardDetalhes {
+  margin-top: 20px;
+  height: 450px;
+  display: flex;
+  width: 85%;
+  background-color: #85A98F;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.cardDetalhes img{
+  border-radius: 10px;
+}
+
+.dados {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.negrito {
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.dados i {
+  color: rgb(253, 253, 29);
+}
+
+.card img {
+  border-radius: 10px;
+}
+
+.fundo-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu{
+  display: flex;
+  padding:  0 20px 20px 20px;
+  flex-direction: column;
+  top: -288px;
+  background-color: #525B44;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  z-index: 999;
+  border-radius: 0 0 10px 10px;
+  transition: all ease 0.5s;
+}
+
+.menu ul{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0 10px;
+}
+
+.menu ul .link{
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menu form{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  height: 30px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.menu form input{
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+}
+
+.menu form button{
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.menu form button i{
+  color: #525B44;
+}
+
+.active{
+  top: 87px;
+}
+
+@media (max-width: 480px){
+  nav .links,
+  nav .busca{
+      display: none;
+  }
+
+  nav{
+      z-index: 1000;
+      justify-content: space-between;
+      padding: 20px;
+  }
+
+  .container{
+      grid-template-columns: 1fr;
+  }
+
+  .menu-hamburguer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .menu-hamburguer button{
+      height: 40px;
+      width: 40px;
+      font-size: 1.6rem;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+  }
+
+  @media (max-width: 480px){
+    nav .links,
+    nav .busca{
+        display: none;
+    }
+
+    nav{
+        z-index: 1000;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .menu-hamburguer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-hamburguer button{
+        height: 40px;
+        width: 40px;
+        font-size: 1.6rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: white;
+    }
+
+    .cardDetalhes{
+        margin-top: 0;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cardDetalhes img{
+        width: 230px;
+    }
+
+    .cardDetalhes h1{
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .avaliacao{
+        margin: 10px 0;
+        align-items: center;
+        justify-content: center;
+    }
+}
+}
